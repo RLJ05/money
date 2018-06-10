@@ -1,0 +1,21 @@
+# IN / OUT
+
+# IN - TRANSFER FROM PERSON, SALARY, INTERNAL TRANSFER, REBATE
+# OUT - CARD, TRANSFER TO COMPANY, TRANSFER TO PERSON, INVESTMENT, FINE, ATM
+
+
+# TRANSACTION
+
+# DATE
+# BANK            (Natwest, ANZ, ING, Manual)
+# CURRENCY        (AUD, GBP)
+# DIRECTION       (CREDIT, DEBIT)
+# AMOUNT
+# TYPE            (Card, ATM, Salary, Government, Company, Private, Investment, Internal)
+# COUNTER-PARTY
+# CATEGORY        (Out: Grocery, Utilities, Rent, Transport, Medical, Eating Out, Entertainment, Purchases, Holiday, Household, Family)
+#                 ( In: Airtasker, Tuition, Salary, Rebate, Rent, Interest)
+# EXCLUDE         (True, False)
+
+# Function to convert each bank into the above form
+# Function to load + append
