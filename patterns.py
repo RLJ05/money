@@ -18,3 +18,24 @@ ANZ_REGEX = [
     (FEE, r'.*ACCOUNT SERVICING (FEE).*'),
     (INTEREST, r'.*(INTEREST).*')
 ]
+
+NATWEST_REGEX = [
+    (CARD_PAYMENT, [r'POS\s(.+)']),
+    (TRANSFER_TO,  [r'DPC\s(.+)']),
+    (TRANSFER_FROM, []),
+    (PAYMENT_TO, [r'D\/D\s(.*)', r'DPC']),
+    (SALARY, []),
+    (ATM, [r'C\/L\s(.*)']),
+    (FEE, r'CHG\s(.*)'),
+    (INTEREST, r'INT\s(.*)')
+]
+
+REMOVE = [
+    r'[\d\.-]+(?:[AP]M)?',
+    r'(MON|TUE|WED|THU|FRI|SAT|SUN)',
+    r'(GBP|USD|AUD)',
+    r'(T1|#?\+?\d[A-Z\d]+|[A-Z\d]+\d)',
+    r'(INC|O\/S|VRATE|AU)',
+    r'(FGN|PUR|FEE)',
+    r'SYDNEY'
+]
